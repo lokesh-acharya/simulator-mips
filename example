@@ -1,0 +1,22 @@
+.data
+
+majif
+majig
+
+.text
+
+main:
+    add $t3, $t1, $t2 
+    sub $t4, $t2, $t1
+    j loki
+
+maji:
+    sw $t1, 0($t5)
+    lw $t8, 0($t6)
+    jr $ra
+
+loki:
+    sll $t5, $t1, 2
+    srl $t6, $t2, 2
+    jal maji
+    end
